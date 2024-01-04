@@ -76,7 +76,7 @@ function findElement(arr, value) {
  *    findAllOccurrences([ true, 0, 1, 'true' ], true) => 1
  */
 function findAllOccurrences(arr, item) {
-  const count = arr.reduce(function (n, val) {
+  const count = arr.reduce(function N(n, val) {
     return n + (val === item);
   }, 0);
   return count;
