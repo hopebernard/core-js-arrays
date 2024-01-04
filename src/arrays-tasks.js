@@ -133,7 +133,6 @@ function getAverage(arr) {
   const sum = arr[0] + arr[1] + arr[2] + arr[3];
   return sum / len;
 }
-console.log(getAverage([1, 2, 3]));
 
 /**
  * Checks if all strings in an array have the same length.
