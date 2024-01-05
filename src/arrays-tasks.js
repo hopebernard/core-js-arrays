@@ -430,8 +430,16 @@ function getFalsyValuesCount(/* arr */) {
  *                              [0,0,0,1,0],
  *                              [0,0,0,0,1]]
  */
-function getIdentityMatrix(/* n */) {
-  throw new Error('Not implemented');
+function getIdentityMatrix(n) {
+  let index = 0;
+  const arr = new Array(n).fill(0);
+  arr.map((x) => {
+    const tmp = new Array(n).fill(0);
+    tmp[index] = 1;
+    arr[(index += 1)] = tmp;
+    return x;
+  });
+  return arr.slice(1);
 }
 
 /**
@@ -493,8 +501,9 @@ function getMaxItems(/* arr, n */) {
  *    findCommonElements(['a', 'b', 'c'], ['b', 'c', 'd']) => [ 'b', 'c' ]
  *    findCommonElements([1, 2, 3], ['a', 'b', 'c']) => []
  */
-function findCommonElements(/* arr1, arr2 */) {
-  throw new Error('Not implemented');
+function findCommonElements(arr1, arr2) {
+  const results = arr1.filter((value) => arr2.includes(value));
+  return results;
 }
 
 /**
